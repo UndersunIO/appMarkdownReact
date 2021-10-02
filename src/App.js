@@ -22,7 +22,6 @@ class App extends Component {
     localStorage.setItem('text', text)
   }
 
-  
   handleChange = event => {
     const text = event.target.value;
     this.setState({text})
@@ -30,8 +29,8 @@ class App extends Component {
 
   renderText = text => {
     const __html = marked(text, { sanitize:true})
-return { __html }
-}
+    return { __html }
+  }
   render(){
     return(
       <div className="container">
